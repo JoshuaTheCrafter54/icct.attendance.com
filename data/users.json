@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Juan Dela Cruz",
+    "username": "juan",
+    "email": "juan@example.com",
+    "password": "juan123",
+    "role": "student",
+    "status": "verified",
+    "studentId": "2023-001"
+  },
+  {
+    "id": 2,
+    "name": "Maria Santos",
+    "username": "maria",
+    "email": "maria@example.com",
+    "password": "maria123",
+    "role": "student",
+    "status": "pending",
+    "studentId": "2023-002"
+  },
+  {
+    "id": 3,
+    "name": "Pedro Reyes",
+    "username": "pedro",
+    "email": "pedro@example.com",
+    "password": "pedro123",
+    "role": "student",
+    "status": "verified",
+    "studentId": "2023-003"
+  },
+  {
+    "id": 4,
+    "name": "Joshua",
+    "username": "joshuadmin",
+    "email": "joshua@example.com",
+    "password": "admin123",
+    "role": "admin",
+    "position": "Proj. Manager",
+    "status": "active"
+  },
+  {
+    "id": 5,
+    "name": "JoshuaTheCrafter",
+    "username": "joshuacraft",
+    "email": "craft@example.com",
+    "password": "secretary123",
+    "role": "admin",
+    "position": "Secretary",
+    "status": "offline"
+  },
+  {
+    "id": 6,
+    "name": "Joshua C San Juan",
+    "username": "JoshuaTheCrafter",
+    "email": "joshuasanjuangaming@gmail.com",
+    "password": "joshua54",
+    "role": "student",
+    "status": "pending",
+    "studentId": "2023-006"
+  }
+]

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Login</title>
+
+    <link rel="stylesheet" href="adminSide/asset/css/global.css">
+    <link rel="stylesheet" href="asset/css/auth/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <div class="login-container-overlay">
+        <div class="login-container">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="fields">
+                    <p>Username</p>
+                    <input type="text" name="username" placeholder="Username" required>
+                </div>
+
+                <div class="fields">
+                    <p>Password</p>
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+
+                <div class="confirmation">
+                    <button type="submit">Login</button>
+                    <p>Have an account? <a href="#" id="showSignup">Register</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="signup-container-overlay">
+        <div class="signup-container">
+            <h2>Create Account</h2>
+
+            <form id="signupForm" method="post">
+                <div class="fields">
+                    <p>Full Name</p>
+                    <input type="text" name="fullname" placeholder="Full Name" required>
+                </div>
+
+                <div class="fields">
+                    <p>Username</p>
+                    <input type="text" name="username" placeholder="Username" required>
+                </div>
+
+                <div class="fields">
+                    <p>Email</p>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+
+                <div class="fields">
+                    <p>Password</p>
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+
+                <div class="fields">
+                    <p>Confirm Password</p>
+                    <input type="password" name="confirmPassword" placeholder="Confirm Password" required>
+                </div>
+
+                <div class="confirmation">
+                    <button type="submit">Register</button>
+                    <p>Already have an account? 
+                        <a href="#" id="showLogin">Login</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>    
+</body>
+</html>
+<script src="asset/js/authToggler.js"></script>
+<script src="asset/js/auth.js"></script>
+<script src="https://raw.githubusercontent.com/JoshuaTheCrafter54/joshuasanjuan.com/main/js/animation.js"></script>

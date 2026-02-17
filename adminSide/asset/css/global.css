@@ -1,0 +1,39 @@
+/* Global CSS */
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: monospace;
+    background-color: var(--bg-main);
+    margin: 0;
+    padding: 0;
+    color: var(--text-primary);
+}
+
+/* roots */
+:root {
+  /* Base */
+  --bg-main: #021024;        /* main background */
+  --bg-surface: #052659;     /* cards, navbars */
+
+  /* Accents */
+  --accent-primary: #5483B3; /* buttons, links */
+  --accent-secondary: #7da0ca; /* hover, borders */
+
+  /* Text */
+  --text-primary: #c1e8ff;   /* main text */
+
+
+  /* Borders */
+  --border : 1px solid #7da0ca;
+}
+
+input:focus{
+    box-shadow: none;
+    outline: none;
+}
+
+a{
+    text-decoration: none;;
+}

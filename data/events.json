@@ -1,0 +1,52 @@
+[
+  {
+    "id": 101,
+    "name": "Orientation Day",
+    "description": "Step up now and transform your skills with ICSO's experts—together, we're unstoppable!",
+    "date": "2026-01-10",
+    "startTime": "12:00",
+    "endTime": "15:00",
+    "place": "Main Hall",
+    "poster": "asset/img/Seminar.jpg"
+  },
+  {
+    "id": 102,
+    "name": "Orientation Day",
+    "description": "Step up now and transform your skills with ICSO's experts—together, we're unstoppable!",
+    "date": "2026-01-10",
+    "startTime": "12:00",
+    "endTime": "15:00",
+    "place": "Main Hall",
+    "poster": "asset/img/Seminar.jpg"
+  },
+  {
+    "id": 103,
+    "name": "Orientation Day",
+    "description": "Step up now and transform your skills with ICSO's experts—together, we're unstoppable!",
+    "date": "2026-01-10",
+    "startTime": "12:00",
+    "endTime": "15:00",
+    "place": "Main Hall",
+    "poster": "asset/img/Seminar.jpg"
+  },
+  {
+    "id": 104,
+    "name": "Tech Seminar",
+    "description": "Dive deep into modern tech stacks, automation, and AI-driven workflows.",
+    "date": "2026-01-15",
+    "startTime": "09:00",
+    "endTime": "12:00",
+    "place": "Theater",
+    "poster": "asset/img/123.jpg"
+  },
+  {
+    "id": 105,
+    "name": "Orientation Day",
+    "description": "Step up now and transform your skills with ICSO's experts—together, we're unstoppable!",
+    "date": "2026-01-10",
+    "startTime": "12:00",
+    "endTime": "15:00",
+    "place": "Main Hall",
+    "poster": "asset/img/Seminar.jpg"
+  }
+]

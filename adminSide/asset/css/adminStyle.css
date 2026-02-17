@@ -1,0 +1,1014 @@
+/*Global Settings*/
+:root{
+    --shape : bevel;
+}
+
+/* header navigation */
+header{
+    width: 250px;
+    height: 95vh;
+    border: 1.5px solid var(--accent-primary);
+    background-color: var(--bg-surface);
+    margin-left: 8px;
+    margin-top: auto;
+    position: absolute;
+    bottom: 8px;
+    position: fixed;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    corner-shape: var(--shape);
+    border-top-right-radius: 50px;
+
+    transition: 0.5s;
+}
+
+/*profile image*/
+.adminProfile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.adminProfile img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: gray;
+}
+
+/* navbar */
+nav{
+    width: 100%;
+    height: 80%;
+    margin-top: 20px;
+}
+
+nav ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: var(--text-primary);
+    font-size: 18px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* hover and active */
+nav ul li a:hover{
+    background-color: var(--accent-primary);
+    color: var(--text-primary);
+    transition: 0.2s;
+}
+
+header .active{
+    background-color: var(--accent-primary);
+    color: var(--text-primary);
+    transition: 0.3s;
+}
+
+/* logout button */
+.logout-btn{
+    width: 250px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 20px;
+    background-color: red;
+    color: white;
+    corner-shape: var(--shape);
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+/***************************/
+/*       DASHBOARD         */
+/***************************/
+
+/**** content container ****/
+.content-container{
+    position: absolute;
+    width: calc(100% - 285px - 16px);
+    height: auto;
+    margin-left: 285px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.content{
+    height: fit-content;
+    gap: 16px;
+    margin: 8px;
+}
+
+.statistics{
+    border: var(--border);
+    background-color: var(--bg-surface);
+    border-width: 2px;
+    border-radius: 16px;
+    padding: 8px;
+}
+
+.statistics-overview{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.statistics-card {
+    border: var(--border);
+    border-color: var(--accent-primary);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    min-height: 150px;
+    width: 100%;
+    max-width: 300px;
+
+    padding: 12px;
+    border-radius: 20px;
+    corner-shape: scoop;
+
+    background-color: white;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.statistics-icon i{
+    font-size: 40px;
+}
+
+/*chart*/
+.charts-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 400px;
+    
+    min-height: 350px;
+    min-width: 550px;
+
+    flex-wrap: wrap;
+    margin: 8px;
+    gap: 8px;
+}
+.chart-box {
+    border: var(--border);
+    background-color: var(--bg-surface);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    height: 350px;
+    border-radius: 20px;
+}
+.chart-box h3 {
+    margin-left: 8px;
+}
+
+.chart-box canvas {
+    width: 100% !important;
+    max-height: 80% !important;
+    padding: 8px;
+}
+
+/***************************/
+/*    USER MANAGEMENT      */
+/***************************/
+#user div{
+    padding-top: 8px;
+}
+
+/* header */
+#user .header-title{
+    display: flex;
+    justify-content: space-between;
+}
+
+#user .header-title button{
+    width: 200px;
+    font-size: 18px;
+    font-weight: bolder;
+    background-color: blue;
+    border-radius: 10px;
+    color: var(--text-primary);
+    transition: 0.2s;
+}
+
+#user .header-title button:hover{
+    background-color: rgb(125, 125, 253);
+    color: white;
+}
+
+.header-navigation ul{
+    width: auto;
+    max-width: 700px;
+    display: flex;
+    justify-content: space-evenly;
+    float: auto;
+}
+
+.header-navigation ul li{
+    list-style: none;
+}
+
+.header-navigation ul li a{
+    border: 0px solid var(--accent-primary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 14px 40px;
+    color: var(--text-primary);
+}
+
+.header-navigation ul li a:hover{
+    border-bottom-width: 5px;
+    border-color: greenyellow;
+    transition: 0.1s;
+    color: greenyellow;
+}
+
+.header-navigation .active{
+    border-bottom-width: 5px;
+    border-color: greenyellow;
+    transition: 0.1s;
+    color: greenyellow;
+}
+
+/* search bar */
+input,
+textarea{
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-color: var(--text-primary);
+    padding-left: 16px;
+    font-size: 16px;
+}
+
+.data-container {
+    border: var(--border);
+    display: none;
+    height: 450px;
+    overflow-y: auto;
+}
+
+.data-container h1 {
+    padding: 8px;
+    padding-bottom: 0;
+}
+
+.data-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-container th,
+.data-container td {
+    padding: 8px;
+    text-align: left;
+}
+
+.data-container thead {
+    background: #0a2540;
+}
+
+/* data status */
+.status {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    text-transform: capitalize;
+}
+
+.status.verified {
+    background: #28a745;
+    color: #fff;
+}
+
+.status.pending {
+    background: #ffc107;
+    color: #000;
+}
+
+
+/***************************/
+/*    EVENT MANAGEMENT     */
+/***************************/
+
+/* Events */
+#events .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#events .header button{
+    height: auto;
+    padding: 20px 40px;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 10px;
+    background-color: blue;
+    transition: 0.2s;
+}
+
+#events .header button:hover{
+    background-color: var(--accent-secondary);
+    color: white;
+}
+
+/* event modal design */
+/* Lock page scroll when modal is open */
+body.modal-open {
+    overflow: hidden;
+}
+
+.event-container input{border-radius: 8px;}
+.event-container{
+    border: 1.5px solid yellow;
+    border-radius: 20px;
+    
+    height: 500px;
+    width: 400px;
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    display: none; /* toggle this with JS */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    padding-bottom: 32px;
+    z-index: 9999; /* above header */
+    background-color: var(--bg-surface);
+    
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+}
+
+.form-wrapper{
+    margin: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.event-placeholder{
+    width: 325px;
+}
+
+/* event description */
+.event-container .header i{
+    font-weight: 800px;
+}
+
+.event-container .event-description {
+    height: 100px;
+    width: 325px;
+    resize: none; /* optional: prevents dragging */
+    padding: 10px;
+    font-family: inherit;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+/* time container */
+.event-container .timeframe{
+    height: 100px;
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-evenly;
+    gap: 8px;
+}
+
+.time-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+/* time placeholder */
+.event-placeholder-time{
+    width: 150px;
+}
+
+/* create event button */
+.event-container button{
+    width: 325px;
+    height: 60px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    font-size: 18px;
+    border-radius: 5px;
+    
+    font-weight: 700;
+}
+
+.event-container #close-container{
+    font-size: 25px;
+    position: relative;
+    right: -99px;
+    top: 8px;
+}
+
+/* Backdrop */
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(2px);
+    z-index: 9998;
+    display: none;
+}
+
+/* === */
+
+/* Event list Container */
+.event-list{
+    padding: 8px;
+    gap: 8px;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.event-list-header{
+    background: #0a2540;
+    height: 40px;
+    
+    display: grid;
+    grid-template-columns: 0.8fr 1fr 1fr 1fr 1fr 1fr 2fr;
+    align-items: center;
+    
+    padding: 0 12px;
+    color: white;
+    font-weight: 600;
+}
+
+/* event list content */
+.event-list-content{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.event-list-content .event-row{
+    height: 40px;
+    
+    display: grid;
+    grid-template-columns: 0.8fr 1fr 1fr 1fr 1fr 1fr 2fr;
+    align-items: center;
+    
+    padding: 0 12px;
+}
+
+
+/* event button action */
+.event-row .edit,
+.event-row .delete,
+.event-row .view{
+    padding: 5px 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    transition: 0.1s;
+}
+
+.edit{
+    background-color: blue;
+    color: white;
+}
+.edit:hover{
+    background-color: rgb(78, 78, 255);
+}
+
+.delete{
+    background-color: red;
+    color: white;
+}
+.delete:hover{
+    background-color: rgb(255, 78, 78);
+    color: white;
+}
+
+.view{
+    background-color: gray;
+    color: black;
+}
+.view:hover{
+    background-color: rgb(196, 195, 195);
+    color:  black;
+}
+
+/* view event modal design */
+.view-event-container{
+    display: none; /* change from block to flex */
+    flex-direction: column;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(2px);
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal content box */
+.modal-content {
+    background-color: white;
+    color: black;
+    padding: 20px 30px;
+    border-radius: 10px;
+    width: 800px;
+    height: 400px;
+    position: relative;
+}
+
+/* Close button (X) */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Event info container */
+.view-event-container p {
+    margin: 8px 0;
+    font-weight: 400;
+}
+
+/* Modal action buttons */
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* Event Modal Design */
+.view-event-details{
+    display: flex;
+    gap: 32px;
+}
+.view-event-details img{
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.view-event-details .event-details{
+    width: 100%;
+    height: auto;
+}
+
+/* delete events modal */
+.delete-event-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(2px);
+    
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.delete-modal-box{
+    background-color: white;
+    color: black;
+    height: 300px;
+    width: 600px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 10px;
+}
+
+.delete-modal-box button{
+    padding: 8px 64px;
+    font-size: 16px;
+    font-weight: bold;   
+}
+
+/* edit events modal */
+.edit-event-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(2px);
+    
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-modal-box{
+    height: 500px;
+    width: 700px;
+    background-color: white;
+    border-radius: 16px;
+    color: black;
+    padding: 16px;
+    justify-content: center;
+}
+/* main container */
+.edit-content-container{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* textarea */
+#edit-event-description{
+    width: 325px;
+    resize: none;
+}
+
+.edit-modal-box .edit-timeframe{
+    width: 335x;
+    display: flex;
+    gap: 8px;
+}
+
+.edit-form{
+    width: 345px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-actions{
+    width: 100%;
+    padding-top: 16px;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.edit-actions button{
+    width: 165px;
+    height: 40px;
+}
+
+/* edit photo */
+.edit-photo {
+    width: 430px;         /* set width */
+    height: 400px;        /* set height */
+    border-radius: 8px;
+    overflow: hidden;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f2f5;
+}
+
+.edit-photo img {
+    width: 100%;          /* fill container */
+    height: 100%;         /* fill container */
+    object-fit: cover;    /* keep aspect ratio & crop if needed */
+    display: block;
+    cursor: pointer;      /* shows it’s clickable */
+}
+
+/* hover */
+.edit-photo img {
+    cursor: pointer;
+}
+.edit-photo img:hover {
+    opacity: 0.85;
+}
+
+/***************************/
+/*  ATTENDANCE MANAGEMENT  */
+/***************************/
+
+/* Event Card container */
+.event-card-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+/* event cards */
+.event-card{
+    width: 330px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    background-color: var(--bg-surface);
+    transition: all 0.2s;
+}
+
+/* -- Event card animations -- */
+.event-card:hover{
+    background-color: #0644a2;
+}
+
+.event-card img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.event-card button{
+    padding: 16px 96px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.event-card button:hover{
+    background-color: gray;
+    color: white;
+    font-size: 15px;
+}
+
+/* Event Content */
+.event-attendance-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(2px);
+    
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.event-attendance-container {
+    width: 90%;
+    min-height: 300px;
+    max-width: 1300px;
+    
+    padding: 8px;
+    box-sizing: border-box;
+    
+    background-color: white;
+    border-radius: 16px;
+    color: black;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    
+    margin: 20px auto; /* centers on large screens */
+}
+
+.event-attendance-container .header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .button-container{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 32px;
+}
+
+.header button{
+    margin-top: 16px;
+    font-size: 16px;
+    padding: 12px 64px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* main container */
+.event-attendance-container .main-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* qr code scanner */
+.qr-code-scanner-container{
+    width: 400px;
+    height: 525px;
+}
+
+/* attendance table log */
+.attendance-table-container{
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+}
+
+.attendance-table-container .header{
+    width: 100%;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.attendance-table-container .header p{
+    background-color: gray;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.log{
+    width: 100%;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;
+    border: 0.1px solid black;
+    margin-top: 8px;
+}
+
+.log-data{
+    height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/***************************/
+/*    REPORT MANAGEMENT    */
+/***************************/
+#reports .header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 64px;
+}
+
+#search-reports{
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    corner-shape: bevel;
+    width: 70%;
+}
+
+/* report container */
+.report-list-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* report content */
+.report-content{
+    width: 99%;
+    display: flex;
+    padding: 8px;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s;
+    border-radius: 10px;
+}
+
+.report-content:hover{
+    background-color: var(--accent-secondary);
+}
+
+.report-content img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.report-content button{
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* report contents */
+.view-report-overlay{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.view-report-content{
+    height: 90%;
+    width: 90%;
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+}
+
+.view-report-content .report-header{
+    width: 99%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+    border: 1px solid black;
+}
+
+.view-report-content input{
+    width: 80%;
+    margin: 8px;
+    margin-bottom: 0px;
+}
+
+.report-header button{
+    padding: 10px 50px;
+    font-weight: 700;
+    border-radius: 10px;
+}
+
+.report-header i{
+    cursor: pointer;
+}
+
+.view-report-content .header{
+    width: 100%;
+    border: 1px solid black;
+}
+
+.attendance-log-container{
+    width: auto;
+    height: 100% auto;
+    padding: 8px;
+}
+
+.attendance-log-container .header{
+    background-color: var(--accent-primary);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.attendance-log-container .logs{
+    display: flex;
+    flex-direction: column;
+}
+
+.attendance-log-container .log{
+    display: flex;
+    justify-content: space-evenly;
+}
